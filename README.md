@@ -66,11 +66,11 @@ Domain tests cover billing boundaries, payment history, ledger balances, linked 
 
 `vercel.json` defines the build, output directory, and security headers. No application environment variables are required.
 
-1. Push this repository to a new GitHub repository such as `MainMMV/mmv-purchases`.
+1. Use the selected GitHub repository, [MainMMV/MMVpurchase](https://github.com/MainMMV/MMVpurchase), with the `main` branch.
 2. Import it as a **new** Vercel project, with the Vite preset, `npm run build`, and `dist` output.
 3. Choose Node.js 24 and deploy. The production site stores each visitor's data in their own browser.
 
-The cloud environment's injected GitHub integration currently cannot create a repository: GitHub returned `Resource not accessible by integration` through both creation APIs. The intended new repository has not been created remotely. A local Git repository is prepared separately from the existing `MMVpurchase` checkout.
+The selected repository is `MainMMV/MMVpurchase`. Creating a separate GitHub repository is not required.
 
 Vercel API access is reachable, but no Vercel token is currently configured. Add `VERCEL_TOKEN` securely in cloud environment settings, or connect/import through Vercel's dashboard. Never paste a token into chat or commit it to this repository. Hosting is not live until deployment succeeds.
 

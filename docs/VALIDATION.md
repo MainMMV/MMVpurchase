@@ -14,15 +14,14 @@ Validated in the cloud workspace on October 11, 2026, with Node.js 24.19.0 and C
 
 ## Current external blockers
 
-- The connected GitHub account is `MainMMV`. Both GraphQL and REST repository-creation operations were denied with `Resource not accessible by integration` (HTTP 403 for REST). `MainMMV/mmv-purchases` has **not** been created remotely.
+- GitHub target: the user selected the existing `MainMMV/MMVpurchase` repository and authorized pushing the app to `main`. Repository creation is no longer required.
 - Vercel is reachable, but no `VERCEL_TOKEN` is configured. No Vercel project or production deployment has been created.
 - Reusable `install_script` and `start_skill`, required network destinations, and a Vercel secret requirement were saved in the cloud environment draft. Saving the draft does not publish the environment or deploy the application. Fresh-task restoration has not been verified.
 
 ## To finish publication
 
-1. Create an empty `MainMMV/mmv-purchases` repository and grant the connected GitHub integration access to it, or authorize repository creation for an appropriate GitHub connection.
-2. Supply `VERCEL_TOKEN` securely in environment settings. Do not put it in source or chat. Alternatively, import the new GitHub repository through Vercel's own dashboard.
-3. Resume with this prepared local checkout: add the verified remote, push `main`, create a new Vercel project, deploy, and verify the production site. Update the environment's repository membership after the remote exists and all checkouts have been inventoried.
-4. Review/save the environment draft and publish it through the product when ready. Local processes must be started again in future tasks using the saved instructions.
+1. Supply `VERCEL_TOKEN` securely in environment settings. Do not put it in source or chat. Alternatively, import the new GitHub repository through Vercel's own dashboard.
+2. Import `MainMMV/MMVpurchase` into a new Vercel project, deploy `main`, and verify the production site.
+3. Review/save the environment draft and publish it through the product when ready. Local processes must be started again in future tasks using the saved instructions.
 
 The existing `/workspace/MMVpurchase` checkout has been left unchanged. The new project is at `/workspace/mmv-purchases`.
