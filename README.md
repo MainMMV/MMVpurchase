@@ -2,6 +2,8 @@
 
 A warm Gruvbox workspace for thoughtful spending and purposeful saving. Built with React, TypeScript, and Vite; deployable as a static app on Vercel.
 
+**Live app:** [mmvpurchase.vercel.app](https://mmvpurchase.vercel.app)
+
 ## Run locally
 
 Use Node.js 24 (or 22.12+).
@@ -62,17 +64,15 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e
 
 Domain tests cover billing boundaries, payment history, ledger balances, linked goals, purchase completion, reporting, backup integrity, and safe CSV escaping. Browser tests cover create/update workflows, persistence, trash/restore/undo, savings and goals, settings, mobile navigation, and offline reloads.
 
-## Deploy to Vercel
+## Vercel deployment
 
 `vercel.json` defines the build, output directory, and security headers. No application environment variables are required.
 
-1. Use the selected GitHub repository, [MainMMV/MMVpurchase](https://github.com/MainMMV/MMVpurchase), with the `main` branch.
-2. Import it as a **new** Vercel project, with the Vite preset, `npm run build`, and `dist` output.
-3. Choose Node.js 24 and deploy. The production site stores each visitor's data in their own browser.
+The `mmvpurchase` Vercel project is linked to [MainMMV/MMVpurchase](https://github.com/MainMMV/MMVpurchase). Production builds use the Vite preset, `npm run build`, and the `dist` output. Pushes to `main` trigger deployment. The production site stores each visitor's data in their own browser.
 
 The selected repository is `MainMMV/MMVpurchase`. Creating a separate GitHub repository is not required.
 
-Vercel API access is reachable, but no Vercel token is currently configured. Add `VERCEL_TOKEN` securely in cloud environment settings, or connect/import through Vercel's dashboard. Never paste a token into chat or commit it to this repository. Hosting is not live until deployment succeeds.
+The initial production deployment was verified at [mmvpurchase.vercel.app](https://mmvpurchase.vercel.app). Deployment credentials remain in secure environment settings and must never be committed to this repository.
 
 ## Product direction
 

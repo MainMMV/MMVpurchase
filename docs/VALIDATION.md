@@ -12,16 +12,16 @@ Validated in the cloud workspace on October 11, 2026, with Node.js 24.19.0 and C
 - Development server: started successfully; its app HTML and module entry were verified.
 - Production preview: functional browser tests ran against the actual compiled assets.
 
-## Current external blockers
+## Publication status
 
 - GitHub target: the user selected the existing `MainMMV/MMVpurchase` repository and authorized pushing the app to `main`. Repository creation is no longer required.
-- Vercel is reachable, but no `VERCEL_TOKEN` is configured. No Vercel project or production deployment has been created.
-- Reusable `install_script` and `start_skill`, required network destinations, and a Vercel secret requirement were saved in the cloud environment draft. Saving the draft does not publish the environment or deploy the application. Fresh-task restoration has not been verified.
+- Vercel project `mmvpurchase` is linked to `MainMMV/MMVpurchase`, with `main` as its production branch.
+- Production deployment `dpl_BkqGJKMpLrvggdkF9qsP9AKAvXpv` completed successfully from commit `fa88b274ab1164e154fababb0a7b13fe2364a17e`.
+- [https://mmvpurchase.vercel.app](https://mmvpurchase.vercel.app) returned the MMV Purchases production shell and the configured content-security-policy, content-type, frame, and referrer headers.
+- Reusable `install_script` and `start_skill` instructions are saved in the cloud environment draft. Fresh-task restoration has not been verified.
 
-## To finish publication
+## Ongoing publication
 
-1. Supply `VERCEL_TOKEN` securely in environment settings. Do not put it in source or chat. Alternatively, import the new GitHub repository through Vercel's own dashboard.
-2. Import `MainMMV/MMVpurchase` into a new Vercel project, deploy `main`, and verify the production site.
-3. Review/save the environment draft and publish it through the product when ready. Local processes must be started again in future tasks using the saved instructions.
+Pushes to `main` trigger Vercel deployments. Keep `VERCEL_TOKEN` in secure environment settings and out of source, logs, and chat. Review/save the environment draft and publish it through the product when ready; local processes must be started again in future tasks using the saved instructions.
 
 The existing `/workspace/MMVpurchase` checkout has been left unchanged. The new project is at `/workspace/mmv-purchases`.
